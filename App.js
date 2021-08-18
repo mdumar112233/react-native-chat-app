@@ -3,13 +3,17 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import TabNavigation from './Components/TabNavigation/TabNavigation';
+import HomeStackNavigation from './Components/StackNavigation/HomeStackNavigation';
+import Header from './Components/Header/Header';
 
 export default function App() {
   return (
     <View style={styles.container}>
-    <NavigationContainer>
-      <TabNavigation/>
-    </NavigationContainer>
+      <Header/>
+      {/* <NavigationContainer>
+        <TabNavigation/>
+      </NavigationContainer> */}
+ 
 
       <StatusBar style="auto" />
     </View>

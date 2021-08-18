@@ -1,17 +1,22 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import HomeScreen from '../../Screens/HomeScreen';
+import Demo from '../../Screens/Demo';
 import HomeStackNavigation from '../StackNavigation/HomeStackNavigation';
-import UserInfo from '../../Screens/UserInfo';
 
-
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialTopTabNavigator();
 
 export default function TabNavigation() {
   return (
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeStackNavigation} />
-        <Tab.Screen name="Settings" component={UserInfo}/>
-      </Tab.Navigator>
-  ); 
+    <Tab.Navigator screenOptions={{
+      tabBarStyle: {
+        // position: 'absolute'
+        marginTop:  29
+      }
+    }}>
+      <Tab.Screen name="HomePage" component={HomeScreen} />
+      <Tab.Screen name="Settings" component={Demo} />
+    </Tab.Navigator>
+  );
 }
