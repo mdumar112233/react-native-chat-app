@@ -4,15 +4,15 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import TabNavigation from './Components/TabNavigation/TabNavigation';
 import HomeStackNavigation from './Components/StackNavigation/HomeStackNavigation';
-import Header from './Components/Header/Header';
+import MainHeader from './Components/Header/Header';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Header/>
-      {/* <NavigationContainer>
+      <MainHeader/>
+      <NavigationContainer>
         <TabNavigation/>
-      </NavigationContainer> */}
+      </NavigationContainer>
  
 
       <StatusBar style="auto" />
@@ -23,6 +23,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'red',
   },
 });

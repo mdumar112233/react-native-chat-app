@@ -10,12 +10,17 @@ const Tab = createMaterialTopTabNavigator();
 export default function TabNavigation() {
   return (
     <Tab.Navigator screenOptions={{
+      tabBarActiveTintColor: 'white',
       tabBarStyle: {
-        // position: 'absolute'
-        marginTop:  29
+        backgroundColor: '#075e54',
+                
+      },
+      tabBarIndicatorStyle: {
+        backgroundColor: 'white'
       }
-    }}>
-      <Tab.Screen name="HomePage" component={HomeScreen} />
+    }}
+    >
+      <Tab.Screen  name="HomePage" component={HomeScreen} />
       <Tab.Screen name="Settings" component={Demo} />
     </Tab.Navigator>
   );
