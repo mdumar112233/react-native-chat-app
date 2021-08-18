@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import HomeScreen from '../../Screens/HomeScreen';
+import ChatScreen from '../../Screens/ChatScreen';
 import Demo from '../../Screens/Demo';
 import HomeStackNavigation from '../StackNavigation/HomeStackNavigation';
 import { Entypo } from '@expo/vector-icons';
+import CameraScreen from '../../Screens/CameraScreen';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -14,29 +15,28 @@ export default function TabNavigation() {
       tabBarActiveTintColor: 'white',
       tabBarStyle: {
         backgroundColor: '#075e54',
-                
       },
       tabBarIndicatorStyle: {
         backgroundColor: 'white'
       },
       tabBarLabelStyle: {
         fontWeight: 'bold'
-      }
+      },
+      // tabBarIcon: {focused: true, color: 'gray' }
     }}
     >
       <Tab.Screen  
         name="Camera" 
-        component={HomeScreen} 
+        component={CameraScreen} 
         options={{
-          tabBarIcon: () => <Entypo name="camera" size={18} color="white" />,
+          tabBarIcon: () => <Entypo focused='true' name="camera" size={18} color="white" /> ,
           tabBarShowLabel: false,
           tabBarIconStyle: {
-            marginTop: 7
-          }
-          
+            marginTop: 7,
+          },
         }}
       />
-      <Tab.Screen initialRoute="Chats" component={Demo} />
+      <Tab.Screen name="Chats" component={ChatScreen} />
       <Tab.Screen name="Status" component={Demo} />
       <Tab.Screen name="Calls" component={Demo} />
     </Tab.Navigator>
