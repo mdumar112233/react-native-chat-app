@@ -29,7 +29,7 @@ export default function TabNavigation() {
         name="Camera" 
         component={CameraScreen} 
         options={{
-          tabBarIcon: () => <Entypo focused='true' name="camera" size={18} color="white" /> ,
+          tabBarIcon: ({color}) => <Entypo name="camera" size={18} color={color} /> ,
           tabBarShowLabel: false,
           tabBarIconStyle: {
             marginTop: 7,
