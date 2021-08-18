@@ -4,6 +4,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import HomeScreen from '../../Screens/HomeScreen';
 import Demo from '../../Screens/Demo';
 import HomeStackNavigation from '../StackNavigation/HomeStackNavigation';
+import { Entypo } from '@expo/vector-icons';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -17,11 +18,27 @@ export default function TabNavigation() {
       },
       tabBarIndicatorStyle: {
         backgroundColor: 'white'
+      },
+      tabBarLabelStyle: {
+        fontWeight: 'bold'
       }
     }}
     >
-      <Tab.Screen  name="HomePage" component={HomeScreen} />
-      <Tab.Screen name="Settings" component={Demo} />
+      <Tab.Screen  
+        name="Camera" 
+        component={HomeScreen} 
+        options={{
+          tabBarIcon: () => <Entypo name="camera" size={18} color="white" />,
+          tabBarShowLabel: false,
+          tabBarIconStyle: {
+            marginTop: 7
+          }
+          
+        }}
+      />
+      <Tab.Screen initialRoute="Chats" component={Demo} />
+      <Tab.Screen name="Status" component={Demo} />
+      <Tab.Screen name="Calls" component={Demo} />
     </Tab.Navigator>
   );
 }
