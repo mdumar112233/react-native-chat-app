@@ -5,12 +5,14 @@ import { styles } from './Style'
 
 export default function ChatItem(props) {
     const {ChatRoom} = props;
-    console.log('chatroom info =>', ChatRoom.users[0].imageUri);
+
+    const user = ChatRoom.users[0];
+    // console.log('chatroom info =>', ChatRoom.users[0].imageUri);
     return (
         <View style={styles.container}>
             <View style={styles.chatContainer}>
                 <View>
-                    <Image source={{uri: ChatRoom.users[0].imageUri}} style={styles.avatar} />
+                    <Image source={{uri: user.imageUri}} style={styles.avatar} />
                 </View>
                 <View style={styles.chatInfo}>
                     <View>
@@ -22,7 +24,6 @@ export default function ChatItem(props) {
                     </View>
                 </View>
             </View>
-            <Text>Chat items name</Text>
         </View>
     )
 }
