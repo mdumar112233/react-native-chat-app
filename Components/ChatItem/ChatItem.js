@@ -15,7 +15,9 @@ export default function ChatItem({ChatRoom}) {
 
     const onClick = () => {
         console.log('hello');
-        navigation.navigate('ChatRoom')
+        navigation.navigate('ChatRoom', {
+            id: ChatRoom.id
+        })
     }
 
 

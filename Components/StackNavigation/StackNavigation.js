@@ -35,7 +35,13 @@ function StackNavigation() {
           }}
           component={TabNavigation} 
         />
-        <Stack.Screen name="ChatRoom" component={ChatRoomScreen} />
+        <Stack.Screen 
+          name="ChatRoom" 
+          component={ChatRoomScreen} 
+          options= {({route}) => ({
+            title: route.params.id
+          })}
+        />
       </Stack.Navigator>
   );
 }
