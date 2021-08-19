@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-export default function ChatRoom() {
+export default function ChatRoomScreen() {
     return (
         <View>
             <Text>Chat room</Text>

@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../../Screens/ChatScreen';
 import { EvilIcons,MaterialCommunityIcons } from '@expo/vector-icons';
 import TabNavigation from '../TabNavigation/TabNavigation';
+import ChatRoomScreen from '../../Screens/ChatRoomScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,7 +35,7 @@ function StackNavigation() {
           }}
           component={TabNavigation} 
         />
-        {/* <Stack.Screen name="Demo" component={Demo} /> */}
+        <Stack.Screen name="ChatRoom" component={ChatRoomScreen} />
       </Stack.Navigator>
   );
 }

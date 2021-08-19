@@ -9,13 +9,11 @@ export default function ChatScreen({navigation}) {
     console.log(ChatRooms[0]); 
     return (
         <View style={styles.container}>
-            {/* <ChatItem ChatRoom={ChatRooms[0]} /> */}
             <FlatList
                 data={ChatRooms}
                 renderItem={({item}) => <ChatItem ChatRoom={item} />}
                 keyExtractor={(item => item.id)}
             />
-            
         </View>
     )
 }
