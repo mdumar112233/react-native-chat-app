@@ -1,13 +1,14 @@
 import React from 'react'
 import { Image } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native'
+import { ChatRooms } from '../../data/ChatRooms';
 import { styles } from './Style'
 
 export default function ChatItem(props) {
     const {ChatRoom} = props;
 
-    const user = ChatRoom.users[0];
-    // console.log('chatroom info =>', ChatRoom.users[0].imageUri);
+    const user = ChatRoom.users[1];
+    console.log('chatroom info =>', user);
     return (
         <View style={styles.container}>
             <View style={styles.chatContainer}>
@@ -16,11 +17,11 @@ export default function ChatItem(props) {
                 </View>
                 <View style={styles.chatInfo}>
                     <View>
-                        <Text>user name</Text>
-                        <Text>last chat</Text>
+                        <Text style={styles.userName}>{user.name}</Text>
+                        <Text style={styles.lastText}>{ChatRoom.lastMessage.content.substring(0, 15)}...</Text>
                     </View>
                     <View>
-                        <Text>last chat time</Text>
+                        <Text style={styles.lastChatTime}>yesterday</Text>
                     </View>
                 </View>
             </View>
