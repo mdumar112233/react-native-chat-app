@@ -3,15 +3,16 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import TabNavigation from './Components/TabNavigation/TabNavigation';
-import HomeStackNavigation from './Components/StackNavigation/HomeStackNavigation';
 import MainHeader from './Components/Header/Header';
+import StackNavigation from './Components/StackNavigation/StackNavigation';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <MainHeader/>
+      {/* <MainHeader/> */}
       <NavigationContainer>
-        <TabNavigation/>
+        {/* <TabNavigation/> */}
+        <StackNavigation/>
       </NavigationContainer>
  
 
@@ -23,6 +24,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
+    backgroundColor: '#FFF',
   },
 });

@@ -1,3 +1,4 @@
+import moment from 'moment';
 import React from 'react'
 import { Image } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native'
@@ -21,7 +22,7 @@ export default function ChatItem(props) {
                         <Text style={styles.lastText}>{ChatRoom.lastMessage.content.substring(0, 15)}...</Text>
                     </View>
                     <View>
-                        <Text style={styles.lastChatTime}>yesterday</Text>
+                        <Text style={styles.lastChatTime}>{moment(ChatRoom.lastMessage.createdAt).format("DD/MM/YY")}</Text>
                     </View>
                 </View>
             </View>

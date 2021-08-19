@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Text, View } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import ChatScreen from '../../Screens/ChatScreen';
-import Demo from '../../Screens/Demo';
-import HomeStackNavigation from '../StackNavigation/HomeStackNavigation';
+import Demo from '../../Screens/ChatRoom';
+// import HomeStackNavigation from '../StackNavigation/StackNavigation';
 import { Entypo } from '@expo/vector-icons';
 import CameraScreen from '../../Screens/CameraScreen';
 

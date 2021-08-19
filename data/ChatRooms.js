@@ -92,7 +92,7 @@ export const ChatRooms = [{
   lastMessage: {
     id: 'm6',
     content: 'I have a solution',
-    createdAt: '2020-10-02T15:40:00.000Z',
+    createdAt: '2021-10-02T15:40:00.000Z',
   }
 }, {
   id: '7',
