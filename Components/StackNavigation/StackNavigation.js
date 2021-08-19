@@ -42,13 +42,19 @@ function StackNavigation() {
           name="ChatRoom" 
           component={ChatRoomScreen} 
           options= {({route, navigation}) => ({
-            title: route.params.name,
+            headerBackImage: false,
             headerLeft: () => (
               <View style={ChatRoomStyles.container}>
-                <AntDesign onPress={navigation.goBack} name="arrowleft" size={24} color="white" />
-                <Image source={{uri: }}/>
+                <Image style={ChatRoomStyles.image} source={{uri: route.params.image}}/>
+              </View>
+            ),
+            headerTitle: () => (
+              <View>
+                <Text style={ChatRoomStyles.userName}>{route.params.name}</Text>
+                <Text style={ChatRoomStyles.userLastMes}>{route.params.lastMessage.substring(0,10)}...</Text>
               </View>
             )
+
           })}
         />
       </Stack.Navigator>
