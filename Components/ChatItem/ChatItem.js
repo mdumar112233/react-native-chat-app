@@ -16,7 +16,10 @@ export default function ChatItem({ChatRoom}) {
     const onClick = () => {
         console.log('hello');
         navigation.navigate('ChatRoom', {
-            id: ChatRoom.id
+            id: ChatRoom.id,
+            name: user.name,
+            image: user.imageUri,
+            lastMessage: ChatRoom.lastMessage.content
         })
     }
 

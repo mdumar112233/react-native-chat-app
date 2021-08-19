@@ -1,11 +1,14 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../../Screens/ChatScreen';
 import { EvilIcons,MaterialCommunityIcons } from '@expo/vector-icons';
 import TabNavigation from '../TabNavigation/TabNavigation';
 import ChatRoomScreen from '../../Screens/ChatRoomScreen';
+import { ChatRoomStyles } from './ChatRoomStyles';
+import { AntDesign } from '@expo/vector-icons';
+import { Image } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
@@ -38,8 +41,14 @@ function StackNavigation() {
         <Stack.Screen 
           name="ChatRoom" 
           component={ChatRoomScreen} 
-          options= {({route}) => ({
-            title: route.params.id
+          options= {({route, navigation}) => ({
+            title: route.params.name,
+            headerLeft: () => (
+              <View style={ChatRoomStyles.container}>
+                <AntDesign onPress={navigation.goBack} name="arrowleft" size={24} color="white" />
+                <Image source={{uri: }}/>
+              </View>
+            )
           })}
         />
       </Stack.Navigator>
