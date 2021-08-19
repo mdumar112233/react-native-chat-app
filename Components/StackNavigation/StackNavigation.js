@@ -7,7 +7,7 @@ import { EvilIcons,MaterialCommunityIcons } from '@expo/vector-icons';
 import TabNavigation from '../TabNavigation/TabNavigation';
 import ChatRoomScreen from '../../Screens/ChatRoomScreen';
 import { ChatRoomStyles } from './ChatRoomStyles';
-import { AntDesign } from '@expo/vector-icons';
+import { Ionicons, FontAwesome, Entypo } from '@expo/vector-icons';
 import { Image } from 'react-native';
 
 const Stack = createNativeStackNavigator();
@@ -53,8 +53,14 @@ function StackNavigation() {
                 <Text style={ChatRoomStyles.userName}>{route.params.name}</Text>
                 <Text style={ChatRoomStyles.userLastMes}>{route.params.lastMessage.substring(0,10)}...</Text>
               </View>
+            ),
+            headerRight: () => (
+              <View style={ChatRoomStyles.leftIcons}>
+                <Ionicons name="call" size={20} color="white" />
+                <FontAwesome name="video-camera" size={20} color="white" />
+                <Entypo name="dots-three-vertical" size={20} color="white" />
+              </View>
             )
-
           })}
         />
       </Stack.Navigator>

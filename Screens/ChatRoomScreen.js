@@ -7,7 +7,6 @@ export default function ChatRoomScreen({route, navigation}) {
     return (
         <View>
             <Text>Chat room</Text>
-            <Button title='button' onPress={navigation.goBack}/>
         </View>
     )
 }

@@ -19,5 +19,10 @@ export const ChatRoomStyles = StyleSheet.create({
     },
     userLastMes: {
         color: '#ddd',
+    },
+    leftIcons: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: 100
     }
 })

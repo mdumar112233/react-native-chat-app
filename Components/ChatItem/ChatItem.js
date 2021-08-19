@@ -22,8 +22,6 @@ export default function ChatItem({ChatRoom}) {
             lastMessage: ChatRoom.lastMessage.content
         })
     }
-
-
     return (
         <TouchableWithoutFeedback onPress={onClick}>
             <View style={styles.container}>
@@ -43,7 +41,6 @@ export default function ChatItem({ChatRoom}) {
                 </View>
             </View>
         </TouchableWithoutFeedback>
-        
     )
 }
 
