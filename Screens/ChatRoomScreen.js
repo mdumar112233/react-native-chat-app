@@ -7,7 +7,6 @@ import { ImageBackground } from 'react-native';
 import ChatInput from '../Components/ChatInput/ChatInput';
 
 export default function ChatRoomScreen({route, navigation}) {
-    // const id = route.params;
 
     return (
         <View>
