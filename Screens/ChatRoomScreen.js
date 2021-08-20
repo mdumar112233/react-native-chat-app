@@ -4,6 +4,7 @@ import ChatMessage from '../Components/ChatMessage/ChatMessage';
 import { Chats } from '../data/Chats';
 import bg from '../assets/images/BG.png';
 import { ImageBackground } from 'react-native';
+import ChatInput from '../Components/ChatInput/ChatInput';
 
 export default function ChatRoomScreen({route, navigation}) {
     const id = route.params;
@@ -17,6 +18,9 @@ export default function ChatRoomScreen({route, navigation}) {
                     keyExtractor={(item => item.id)}
                     inverted
                 />
+            <View style={{position: 'absolute'}}>
+                <ChatInput/>
+            </View>    
         </View>
     )
 }

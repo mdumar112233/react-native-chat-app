@@ -14,7 +14,7 @@ export default function ChatMessage({Chat}) {
                 marginLeft: isMyMessage ? 60 : 0,
                 marginRight: isMyMessage ? 0 : 60
             }]}>
-                <Text>{Chat.user.name}</Text>
+               {!isMyMessage &&  <Text>{Chat.user.name}</Text>}
                 <Text>{Chat.content}</Text>
                 <Text>{moment(Chat.createdAt).fromNow()}</Text>
             </View>
