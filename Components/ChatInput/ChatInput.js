@@ -4,7 +4,7 @@ import { styles } from './Styles'
 
 export default function ChatInput() {
     return (
-        <View>
+        <View style={styles.container}>
             <Text>This is input box</Text>
         </View>
     )

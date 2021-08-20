@@ -7,20 +7,19 @@ import { ImageBackground } from 'react-native';
 import ChatInput from '../Components/ChatInput/ChatInput';
 
 export default function ChatRoomScreen({route, navigation}) {
-    const id = route.params;
+    // const id = route.params;
 
     return (
         <View>
-            <ImageBackground style={{width: '100%', height: '100%', position: 'absolute'}} source={bg} />
+            <ImageBackground style={{width: '100%', height: '100%',}} source={bg} >
                 <FlatList
                     data = {Chats.messages}
                     renderItem = {({item}) => <ChatMessage Chat={item}/>}
                     keyExtractor={(item => item.id)}
                     inverted
                 />
-            <View style={{position: 'absolute'}}>
                 <ChatInput/>
-            </View>    
+            </ImageBackground>
         </View>
     )
 }

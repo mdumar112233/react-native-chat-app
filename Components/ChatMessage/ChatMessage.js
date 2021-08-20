@@ -2,6 +2,7 @@ import moment from 'moment';
 import React from 'react'
 import { FlatList } from 'react-native'
 import { StyleSheet, Text, View } from 'react-native'
+import ChatInput from '../ChatInput/ChatInput';
 import { styles } from './Styles';
 
 export default function ChatMessage({Chat}) {
