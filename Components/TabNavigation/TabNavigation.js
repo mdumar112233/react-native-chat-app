@@ -6,6 +6,8 @@ import Demo from '../../Screens/ChatRoomScreen';
 // import HomeStackNavigation from '../StackNavigation/StackNavigation';
 import { Entypo } from '@expo/vector-icons';
 import CameraScreen from '../../Screens/CameraScreen';
+import StatusScreen from '../../Screens/StatusScreen';
+import CallScreen from '../../Screens/CallScreen';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -37,8 +39,8 @@ export default function TabNavigation() {
         }}
       />
       <Tab.Screen name="Chats" component={ChatScreen} />
-      <Tab.Screen name="Status" component={Demo} />
-      <Tab.Screen name="Calls" component={Demo} />
+      <Tab.Screen name="Status" component={StatusScreen} />
+      <Tab.Screen name="Calls" component={CallScreen} />
     </Tab.Navigator>
   );
 }
