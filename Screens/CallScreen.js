@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-export default function UserInfo() {
+export default function CallScreen() {
     return (
         <View>
-            <Text>user info</Text>
+            <Text>This is Call screen</Text>
         </View>
     )
 }
