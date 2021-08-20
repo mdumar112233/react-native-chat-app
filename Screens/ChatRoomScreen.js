@@ -2,18 +2,21 @@ import React from 'react'
 import { StyleSheet, Text, View, FlatList} from 'react-native'
 import ChatMessage from '../Components/ChatMessage/ChatMessage';
 import { Chats } from '../data/Chats';
+import bg from '../assets/images/BG.png';
+import { ImageBackground } from 'react-native';
 
 export default function ChatRoomScreen({route, navigation}) {
     const id = route.params;
-    console.log('main chat info',Chats);
+
     return (
         <View>
-            <Text>Chat room</Text>
-            <FlatList
-                data = {Chats.messages}
-                renderItem = {({item}) => <ChatMessage Chat={item}/>}
-                keyExtractor={(item => item.id)}
-            />
+            <ImageBackground style={{width: '100%', height: '100%', position: 'absolute'}} source={bg} />
+                <FlatList
+                    data = {Chats.messages}
+                    renderItem = {({item}) => <ChatMessage Chat={item}/>}
+                    keyExtractor={(item => item.id)}
+                    inverted
+                />
         </View>
     )
 }
